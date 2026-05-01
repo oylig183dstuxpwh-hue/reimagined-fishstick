@@ -1,0 +1,136 @@
+:root {
+  --text-dark: #171a20;
+  --text-light: #ffffff;
+  --button-dark: rgba(23, 26, 32, 0.85);
+  --button-light: rgba(244, 244, 244, 0.8);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+.topbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 20;
+}
+
+.logo {
+  color: var(--text-dark);
+  text-decoration: none;
+  letter-spacing: .35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.desktop-nav a, .icon-btn {
+  border: 0;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.36);
+  backdrop-filter: blur(8px);
+}
+
+.actions { display: flex; gap: 8px; }
+
+.hero {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 100px 20px 34px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.hero-copy p { margin: 8px 0; font-size: 1.05rem; }
+.link { color: inherit; text-underline-offset: 3px; }
+
+.hero-cta {
+  width: min(640px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  height: 42px;
+  font-weight: 600;
+  letter-spacing: .03rem;
+}
+
+.btn.dark { background: var(--button-dark); color: var(--text-light); }
+.btn.light { background: var(--button-light); color: var(--text-dark); }
+
+.drawer {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  height: 100dvh;
+  width: min(85vw, 320px);
+  background: #fff;
+  z-index: 30;
+  transition: right .25s;
+  display: flex;
+  flex-direction: column;
+  padding: 74px 24px 24px;
+  gap: 10px;
+}
+
+.drawer.open { right: 0; }
+
+.drawer a {
+  color: #171a20;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav,
+  .actions .icon-btn:nth-child(-n+2) { display: none; }
+  .topbar { padding: 0 14px; }
+}
+
+@media (max-width: 640px) {
+  .hero-cta { grid-template-columns: 1fr; }
+  .hero { padding-top: 88px; }
+  .desktop-nav { display: none; }
+}
