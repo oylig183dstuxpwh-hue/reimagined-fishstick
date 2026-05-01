@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla UI/UX Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#">TESLA</a>
+      <nav class="desktop-nav">
+        <a href="#model-y">Model Y</a>
+        <a href="#model-3">Model 3</a>
+        <a href="#model-x">Model X</a>
+        <a href="#solar">Solar Panels</a>
+        <a href="#powerwall">Powerwall</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn">Shop</button>
+        <button class="icon-btn">Account</button>
+        <button class="icon-btn" id="menuToggle">Menu</button>
+      </div>
+    </header>
+
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <button id="closeDrawer" class="close-btn">×</button>
+      <a href="#model-y">Model Y</a>
+      <a href="#model-3">Model 3</a>
+      <a href="#model-x">Model X</a>
+      <a href="#solar">Solar Panels</a>
+      <a href="#powerwall">Powerwall</a>
+      <a href="#">Shop</a>
+      <a href="#">Account</a>
+    </aside>
+
+    <main>
+      <section class="hero" id="model-y" style="--bg: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.05)), url('https://images.unsplash.com/photo-1549921296-3a6b2f271f45?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-copy">
+          <h1>Model Y</h1>
+          <p>Từ 1.299.000.000đ</p>
+          <a href="#" class="link">Đặt lịch lái thử</a>
+        </div>
+        <div class="hero-cta">
+          <button class="btn dark">Đặt xe ngay</button>
+          <button class="btn light">Tìm hiểu thêm</button>
+        </div>
+      </section>
+
+      <section class="hero" id="model-3" style="--bg: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.15)), url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-copy">
+          <h1>Model 3</h1>
+          <p>Hiệu suất mạnh mẽ, thiết kế tối giản</p>
+          <a href="#" class="link">Khám phá phiên bản mới</a>
+        </div>
+        <div class="hero-cta">
+          <button class="btn dark">Đặt xe ngay</button>
+          <button class="btn light">So sánh phiên bản</button>
+        </div>
+      </section>
+
+      <section class="hero" id="model-x" style="--bg: linear-gradient(180deg, rgba(245,245,245,0.4), rgba(245,245,245,0.15)), url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-copy">
+          <h1>Model X</h1>
+          <p>Cửa Falcon Wing • Tăng tốc 2.6s</p>
+          <a href="#" class="link">Xem thông số kỹ thuật</a>
+        </div>
+        <div class="hero-cta">
+          <button class="btn dark">Đặt xe ngay</button>
+          <button class="btn light">Nhận tư vấn</button>
+        </div>
+      </section>
+
+      <section class="hero" id="solar" style="--bg: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-copy">
+          <h1>Solar Panels</h1>
+          <p>Năng lượng mặt trời cho ngôi nhà tương lai</p>
+          <a href="#" class="link">Đặt tư vấn miễn phí</a>
+        </div>
+        <div class="hero-cta">
+          <button class="btn dark">Đặt hàng</button>
+          <button class="btn light">Tìm hiểu thêm</button>
+        </div>
+      </section>
+
+      <section class="hero" id="powerwall" style="--bg: linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-copy">
+          <h1>Powerwall</h1>
+          <p>Dự trữ điện thông minh, hoạt động 24/7</p>
+          <a href="#" class="link">Xem giải pháp lưu trữ</a>
+        </div>
+        <div class="hero-cta">
+          <button class="btn dark">Mua ngay</button>
+          <button class="btn light">Liên hệ chuyên gia</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
